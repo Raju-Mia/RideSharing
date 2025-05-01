@@ -1,0 +1,164 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - prod_server
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker
+        run: |
+          docker build -t ${{secrets.IMAGE_NAME}}:latest -t ${{ secrets.IMAGE_NAME }}:${{github.run_number}} .
+        working-directory: ${{github.workspace}}
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{secrets.DOCKER_USERNAME}}
+          password: ${{secrets.DOCKER_ACCESS_TOKEN}}
+
+      - name: Push Docker Images
+        run: |
+          docker push ${{secrets.IMAGE_NAME}}:latest
+          docker push ${{secrets.IMAGE_NAME}}:${{github.run_number}}
+
+  deploy-and-notify:
+    needs: build
+
+    runs-on: ubuntu-latest
+
+    steps:
+      # Teams Webhook Notifications
+      - name: Deploy Started Notification
+        if: always() # Notify when Production Deployment starts
+        uses: mikesprague/teams-incoming-webhook-action@v1
+        with:
+          github-token: ${{github.token}}
+          webhook-url: ${{secrets.MS_TEAMS_WEBHOOK_URL}}
+          deploy-card: true
+          title: "Production Deployment Started"
+          color: "info"
+          message: "Our application is being prepared for Production Deployment. The Production Deployment process has just started."
+
+      - name: Login to DigitalOcean
+        uses: fifsky/ssh-action@master
+        with:
+          host: ${{secrets.SERVER_SSH_HOST}}
+          user: root
+          key: ${{secrets.SERVER_SSH_PRIVATE_KEY}}
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{secrets.DOCKER_USERNAME}}
+          password: ${{secrets.DOCKER_ACCESS_TOKEN}}
+
+      - name: Stop and Delete Existing Container
+        uses: fifsky/ssh-action@master
+        with:
+          host: ${{secrets.SERVER_SSH_HOST}}
+          user: root
+          key: ${{secrets.SERVER_SSH_PRIVATE_KEY}}
+          command: |
+            cd ${{secrets.DIRECTORY_PATH}}
+            if [ $(docker compose -p ${{secrets.PROJECT_NAME}} ps -q | wc -l) -gt 0 ]; then
+              docker compose -p ${{secrets.PROJECT_NAME}} down --rmi all
+              echo "Project removed successfully."
+            else
+              echo "Project is not running. Moving forward."
+            fi
+
+      - name: Pull Docker-Compose on DigitalOcean
+        uses: fifsky/ssh-action@master
+        with:
+          host: ${{secrets.SERVER_SSH_HOST}}
+          user: root
+          key: ${{secrets.SERVER_SSH_PRIVATE_KEY}}
+          command: |
+            cd ${{secrets.DIRECTORY_PATH}}
+            curl -H "Authorization: token ${{secrets.GIT_PAT}}" -H 'Accept: application/vnd.github.v3.raw' -o docker-compose.yaml -L "${{secrets.BLOB_MAIN_DOCKER_COMPOSE}}?ref=${{secrets.BRANCH_NAME}}"
+            docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_ACCESS_TOKEN}}
+
+      - name: Run Docker Container
+        uses: fifsky/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_SSH_HOST }}
+          user: root
+          key: ${{ secrets.SERVER_SSH_PRIVATE_KEY }}
+          command: |
+            docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_ACCESS_TOKEN}}
+            cd ${{ secrets.DIRECTORY_PATH }}
+            export SECRET_KEY=${{secrets.SECRET_KEY}}
+            export STRIPE_SECRET_KEY=${{secrets.STRIPE_SECRET_KEY}}
+            export STRIPE_PUBLIC_KEY=${{secrets.STRIPE_PUBLIC_KEY}}
+            export STRIPE_HOOK_SECRET=${{secrets.STRIPE_HOOK_SECRET}}
+            export STRIPE_WEBHOOK_SECRET=${{secrets.STRIPE_WEBHOOK_SECRET}}
+            export SUCCESS_URL=${{secrets.SUCCESS_URL}}
+            export CANCEL_URL=${{secrets.CANCEL_URL}}
+            export GOOGLE_API_KEY=${{secrets.GOOGLE_API_KEY}}
+            export AIRLABS_API_KEY=${{secrets.AIRLABS_API_KEY}}
+            export DB_NAME_PROD=${{secrets.DB_NAME_PROD}}
+            export DB_USER=${{secrets.DB_USER}}
+            export DB_PASSWORD=${{secrets.DB_PASSWORD}}
+            export DB_HOST=${{secrets.DB_HOST}}
+            export DB_PORT=${{secrets.DB_PORT}}
+            export ADD_CARD_URL=${{secrets.ADD_CARD_URL}}
+            export REDIS_LOCATION=${{secrets.REDIS_LOCATION}}
+            export LICENSE_VERIFICATION_PORTAL_URL=${{secrets.LICENSE_VERIFICATION_PORTAL_URL}}
+            export ADMIN_PORTAL_URL=${{secrets.ADMIN_PORTAL_URL}}
+            export AWS_ACCESS_KEY_ID=${{secrets.AWS_ACCESS_KEY_ID}}
+            export AWS_SECRET_ACCESS_KEY=${{secrets.AWS_SECRET_ACCESS_KEY}}
+            export AWS_STORAGE_BUCKET_NAME=${{secrets.AWS_STORAGE_BUCKET_NAME}}
+            export AWS_S3_ENDPOINT_URL=${{secrets.AWS_S3_ENDPOINT_URL}}
+            export EMAIL_SENDING_URL=${{secrets.EMAIL_SENDING_URL}}
+            export EMAIL_SENDER_TOKEN=${{secrets.EMAIL_SENDER_TOKEN}}
+            export EMAIL_VERIFICATION_FRONTEND_URL=${{secrets.EMAIL_VERIFICATION_FRONTEND_URL}}
+            export URL_TO_SEND_EMAIL_VERIFICATION_URL=${{secrets.URL_TO_SEND_EMAIL_VERIFICATION_URL}}
+            export twilio_ac_ACCOUNT_SID=${{secrets.twilio_ac_ACCOUNT_SID}}
+            export twilio_ac_AUTH_TOKEN=${{secrets.twilio_ac_AUTH_TOKEN}}
+            export twilio_ac_VERIFY_SID=${{secrets.twilio_ac_VERIFY_SID}}
+            export DVLA_API_KEY=${{secrets.DVLA_API_KEY}}
+            export DVLA_URL=${{secrets.DVLA_URL}}
+            docker compose -p ${{ secrets.PROJECT_NAME }} up -d
+
+      # Teams Webhook Notifications
+
+      - name: Cancelled Notification
+        if: cancelled() # Notify if the Production Deployment is cancelled
+        uses: mikesprague/teams-incoming-webhook-action@v1
+        with:
+          github-token: ${{ github.token }}
+          webhook-url: ${{ secrets.MS_TEAMS_WEBHOOK_URL }}
+          deploy-card: true
+          title: "Production Deployment Cancelled"
+          color: "warning"
+          message: "Unfortunately, the Production Deployment was cancelled unexpectedly."
+
+      - name: Failure Notification
+        if: failure() # Notify if the Production Deployment fails
+        uses: mikesprague/teams-incoming-webhook-action@v1
+        with:
+          github-token: ${{ github.token }}
+          webhook-url: ${{ secrets.MS_TEAMS_WEBHOOK_URL }}
+          deploy-card: true
+          title: "Production Deployment Failed"
+          color: "failure"
+          message: "The Production Deployment encountered an error and could not be completed successfully. Try investigate or re-trigger the Production Deployment."
+
+      - name: Success Notification
+        if: success() # Notify if the Production Deployment succeeds
+        uses: mikesprague/teams-incoming-webhook-action@v1
+        with:
+          github-token: ${{ github.token }}
+          webhook-url: ${{ secrets.MS_TEAMS_WEBHOOK_URL }}
+          deploy-card: true
+          title: "Production Deployment Successful"
+          color: "success"
+          message: "Congratulations! The Production Deployment was successful without any issues."
