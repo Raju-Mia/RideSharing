@@ -1,0 +1,16 @@
+services:
+  uc-api-local:
+    image: uc-api:local
+    build: .
+    env_file:
+      - .env.local
+    ports:
+      - "8000:8000"
+    networks:
+      - aerolite_network
+    container_name: uc-api-local
+    restart: always
+
+networks:
+  aerolite_network:
+    external: true

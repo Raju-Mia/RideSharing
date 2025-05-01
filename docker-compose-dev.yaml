@@ -1,0 +1,26 @@
+services:
+  dev-api-uc:
+    image: "project/uc_backend:dev"
+    env_file:
+      - .env.development
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.dev_api_uc.entrypoints=http
+      - traefik.http.routers.dev_api_uc.rule=Host(`dev-api.uc.co.uk`)
+      - traefik.http.middlewares.dev_api_uc-https-redirect.redirectscheme.scheme=https
+      - traefik.http.routers.dev_api_uc.middlewares=dev_api_uc-https-redirect
+      - traefik.http.routers.dev_api_uc-secure.entrypoints=https
+      - traefik.http.routers.dev_api_uc-secure.rule=Host(`dev-api.uc.co.uk`)
+      - traefik.http.routers.dev_api_uc-secure.tls=true
+      - traefik.http.routers.dev_api_uc-secure.tls.certresolver=digitalocean
+      - traefik.http.routers.dev_api_uc-secure.service=dev_api_uc
+      - traefik.http.services.dev_api_uc.loadbalancer.server.port=8000
+      - traefik.docker.network=proxy
+    networks:
+      - proxy
+    container_name: dev-api-uc
+    restart: always
+
+networks:
+  proxy:
+    external: true

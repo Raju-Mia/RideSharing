@@ -1,0 +1,2452 @@
+[
+  {
+    "id": "DL001",
+    "driver": {
+      "drivingLicenceNumber": "SMITH512317KB123",
+      "firstNames": "Bob",
+      "lastName": "Robin",
+      "gender": "Male",
+      "dateOfBirth": "1987-06-25",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "143 TEST DATA DO NOT DELIVER",
+          "line5": "GLASGOW",
+          "postcode": "NR30 4BH"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Valid"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "BE",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2018-01-20",
+        "expiryDate": "2038-04-01",
+        "restrictions": [
+          {
+            "restrictionCode": "79(03)",
+            "restrictionLiteral": "Restricted to tricycles"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "DR10",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2023-10-22",
+        "penaltyPoints": 6
+      }
+    ],
+    "token": {
+      "validFromDate": "2002-03-04",
+      "validToDate": "2040-03-25",
+      "issueNumber": "23"
+    }
+  },
+  {
+    "id": "DL002",
+    "driver": {
+      "drivingLicenceNumber": "DOE99908150J9456",
+      "firstNames": "Alex",
+      "lastName": "NVAPK",
+      "gender": "Male",
+      "dateOfBirth": "1988-10-29",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "20 TEST DATA DO NOT DELIVER",
+          "line5": "LONDON",
+          "postcode": "NR30 4BH"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Suspended"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "D",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2017-04-03",
+        "expiryDate": "2038-04-23",
+        "restrictions": [
+          {
+            "restrictionCode": "101",
+            "restrictionLiteral": "Not for hire or reward"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "DR10",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2022-07-25",
+        "penaltyPoints": 3
+      }
+    ],
+    "token": {
+      "validFromDate": "1996-11-21",
+      "validToDate": "2031-08-25",
+      "issueNumber": "51"
+    }
+  },
+  {
+    "id": "DL003",
+    "driver": {
+      "drivingLicenceNumber": "BLACK602225JM789",
+      "firstNames": "EAZS",
+      "lastName": "LARF",
+      "gender": "Male",
+      "dateOfBirth": "1982-12-03",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "136 TEST DATA DO NOT DELIVER",
+          "line5": "LONDON",
+          "postcode": "E1 6AN"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Valid"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "B",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2013-11-02",
+        "expiryDate": "2038-03-23",
+        "restrictions": [
+          {
+            "restrictionCode": "79(03)",
+            "restrictionLiteral": "Restricted to tricycles"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "DR10",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2023-01-24",
+        "penaltyPoints": 3
+      }
+    ],
+    "token": {
+      "validFromDate": "2005-04-23",
+      "validToDate": "2040-09-17",
+      "issueNumber": "83"
+    }
+  },
+  {
+    "id": "DL004",
+    "driver": {
+      "drivingLicenceNumber": "WEBB9762225J9987",
+      "firstNames": "Eden",
+      "lastName": "RWSLH",
+      "gender": "Female",
+      "dateOfBirth": "1982-12-13",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "1 TEST DATA DO NOT DELIVER",
+          "line5": "MANCHESTER",
+          "postcode": "B1 1HQ"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Suspended"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "B",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2015-03-05",
+        "expiryDate": "2036-10-12",
+        "restrictions": [
+          {
+            "restrictionCode": "101",
+            "restrictionLiteral": "Not for hire or reward"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP30",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2021-04-22",
+        "penaltyPoints": 6
+      }
+    ],
+    "token": {
+      "validFromDate": "1993-02-05",
+      "validToDate": "2034-07-31",
+      "issueNumber": "93"
+    }
+  },
+  {
+    "id": "DL005",
+    "driver": {
+      "drivingLicenceNumber": "DAVIS508150JK321",
+      "firstNames": "Natasha",
+      "lastName": "Akther",
+      "gender": "Female",
+      "dateOfBirth": "1994-06-21",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "18 TEST DATA DO NOT DELIVER",
+          "line5": "GLASGOW",
+          "postcode": "M1 1AE"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Expired"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "A",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2016-04-10",
+        "expiryDate": "2034-09-22",
+        "restrictions": [
+          {
+            "restrictionCode": "119",
+            "restrictionLiteral": "Emergency vehicles only"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "CU80",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2017-11-09",
+        "penaltyPoints": 2
+      }
+    ],
+    "token": {
+      "validFromDate": "2004-11-08",
+      "validToDate": "2031-01-23",
+      "issueNumber": "92"
+    }
+  },
+  {
+    "id": "DL006",
+    "driver": {
+      "drivingLicenceNumber": "BROWN608150J9654",
+      "firstNames": "Hex",
+      "lastName": "JEEP",
+      "gender": "Male",
+      "dateOfBirth": "1991-06-03",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "156 TEST DATA DO NOT DELIVER",
+          "line5": "LONDON",
+          "postcode": "NR30 4BH"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Valid"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "B",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2018-10-03",
+        "expiryDate": "2034-01-20",
+        "restrictions": [
+          {
+            "restrictionCode": "101",
+            "restrictionLiteral": "Not for hire or reward"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP50",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2018-04-27",
+        "penaltyPoints": 2
+      }
+    ],
+    "token": {
+      "validFromDate": "2006-12-03",
+      "validToDate": "2033-11-07",
+      "issueNumber": "31"
+    }
+  },
+  {
+    "id": "DL007",
+    "driver": {
+      "drivingLicenceNumber": "WHITE502317KL987",
+      "firstNames": "NICE",
+      "lastName": "CHUF",
+      "gender": "Female",
+      "dateOfBirth": "1950-08-01",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "10 TEST DATA DO NOT DELIVER",
+          "line5": "LONDON",
+          "postcode": "E1 6AN"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Expired"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "A",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2015-05-12",
+        "expiryDate": "2035-02-15",
+        "restrictions": [
+          {
+            "restrictionCode": "119",
+            "restrictionLiteral": "Emergency vehicles only"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP50",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2020-10-04",
+        "penaltyPoints": 3
+      }
+    ],
+    "token": {
+      "validFromDate": "2018-02-26",
+      "validToDate": "2036-10-08",
+      "issueNumber": "37"
+    }
+  },
+  {
+    "id": "DL008",
+    "driver": {
+      "drivingLicenceNumber": "LEE99662225J9321",
+      "firstNames": "RONALDO",
+      "lastName": "JP",
+      "gender": "Male",
+      "dateOfBirth": "2000-06-24",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "71 TEST DATA DO NOT DELIVER",
+          "line5": "GLASGOW",
+          "postcode": "NR30 4BH"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Suspended"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "C",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2010-03-14",
+        "expiryDate": "2038-08-04",
+        "restrictions": [
+          {
+            "restrictionCode": "119",
+            "restrictionLiteral": "Emergency vehicles only"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "CU80",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2017-09-15",
+        "penaltyPoints": 5
+      }
+    ],
+    "token": {
+      "validFromDate": "2006-02-07",
+      "validToDate": "2039-05-23",
+      "issueNumber": "43"
+    }
+  },
+  {
+    "id": "DL009",
+    "driver": {
+      "drivingLicenceNumber": "CLARK512317JM654",
+      "firstNames": "JOBS",
+      "lastName": "MULAR",
+      "gender": "Male",
+      "dateOfBirth": "1972-02-15",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "161 TEST DATA DO NOT DELIVER",
+          "line5": "MANCHESTER",
+          "postcode": "E1 6AN"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Expired"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "A",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2019-08-21",
+        "expiryDate": "2037-05-14",
+        "restrictions": [
+          {
+            "restrictionCode": "119",
+            "restrictionLiteral": "Emergency vehicles only"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP30",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2017-07-22",
+        "penaltyPoints": 5
+      }
+    ],
+    "token": {
+      "validFromDate": "2009-11-26",
+      "validToDate": "2036-02-21",
+      "issueNumber": "97"
+    }
+  },
+  {
+    "id": "DL010",
+    "driver": {
+      "drivingLicenceNumber": "JONES608150JK987",
+      "firstNames": "UWTI YKYNEQVV",
+      "lastName": "ACFPWLD",
+      "gender": "Male",
+      "dateOfBirth": "1982-11-13",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "104 TEST DATA DO NOT DELIVER",
+          "line5": "GREAT YARMOUTH",
+          "postcode": "NR30 4BH"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Suspended"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "A",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2013-02-05",
+        "expiryDate": "2040-01-05",
+        "restrictions": [
+          {
+            "restrictionCode": "101",
+            "restrictionLiteral": "Not for hire or reward"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP30",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2023-12-25",
+        "penaltyPoints": 5
+      }
+    ],
+    "token": {
+      "validFromDate": "2013-02-25",
+      "validToDate": "2039-10-01",
+      "issueNumber": "45"
+    }
+  },
+  {
+    "id": "DL011",
+    "driver": {
+      "drivingLicenceNumber": "TPYNUS23697335U",
+      "firstNames": "FRANK",
+      "lastName": "REBARY",
+      "gender": "Male",
+      "dateOfBirth": "1982-05-31",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "20 TEST DATA DO NOT DELIVER",
+          "line5": "GLASGOW",
+          "postcode": "M1 1AE"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Suspended"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "C",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2016-06-13",
+        "expiryDate": "2031-11-12",
+        "restrictions": [
+          {
+            "restrictionCode": "101",
+            "restrictionLiteral": "Not for hire or reward"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "DR10",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2018-12-12",
+        "penaltyPoints": 6
+      }
+    ],
+    "token": {
+      "validFromDate": "2019-04-26",
+      "validToDate": "2032-07-28",
+      "issueNumber": "10"
+    }
+  },
+  {
+    "id": "DL012",
+    "driver": {
+      "drivingLicenceNumber": "QAGQYH7791759ID",
+      "firstNames": "ARIANA",
+      "lastName": "GRANDY",
+      "gender": "Female",
+      "dateOfBirth": "1986-05-21",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "112 TEST DATA DO NOT DELIVER",
+          "line5": "GREAT YARMOUTH",
+          "postcode": "NR30 4BH"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Suspended"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "B",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2014-11-12",
+        "expiryDate": "2036-08-14",
+        "restrictions": [
+          {
+            "restrictionCode": "79(03)",
+            "restrictionLiteral": "Restricted to tricycles"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "CU80",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2021-08-13",
+        "penaltyPoints": 6
+      }
+    ],
+    "token": {
+      "validFromDate": "2007-07-12",
+      "validToDate": "2039-10-15",
+      "issueNumber": "95"
+    }
+  },
+  {
+    "id": "DL013",
+    "driver": {
+      "drivingLicenceNumber": "YASIN703261H99FR",
+      "firstNames": "Hakim",
+      "lastName": "Yasin",
+      "gender": "Male",
+      "dateOfBirth": "1971-03-26",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "4 BLEMUNDS BURRY, DOMBEY STREET",
+          "line5": "LONDON",
+          "postcode": "WC1N 3PF"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Expired"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "A",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2014-08-10",
+        "expiryDate": "2038-09-05",
+        "restrictions": [
+          {
+            "restrictionCode": "79(03)",
+            "restrictionLiteral": "Restricted to tricycles"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP30",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2016-07-02",
+        "penaltyPoints": 2
+      }
+    ],
+    "token": {
+      "validFromDate": "2012-09-28",
+      "validToDate": "2038-02-25",
+      "issueNumber": "71"
+    }
+  },
+  {
+    "id": "DL014",
+    "driver": {
+      "drivingLicenceNumber": "VNUDMH3771239CH",
+      "firstNames": "THOMAS",
+      "lastName": "BOLT",
+      "gender": "Male",
+      "dateOfBirth": "2000-02-21",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "27 TEST DATA DO NOT DELIVER",
+          "line5": "BIRMINGHAM",
+          "postcode": "B1 1HQ"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Expired"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "D",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2012-12-04",
+        "expiryDate": "2031-02-09",
+        "restrictions": [
+          {
+            "restrictionCode": "79(03)",
+            "restrictionLiteral": "Restricted to tricycles"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "CU80",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2023-06-25",
+        "penaltyPoints": 5
+      }
+    ],
+    "token": {
+      "validFromDate": "2006-11-27",
+      "validToDate": "2040-02-28",
+      "issueNumber": "17"
+    }
+  },
+  {
+    "id": "DL015",
+    "driver": {
+      "drivingLicenceNumber": "HQQMNM269746EHP",
+      "firstNames": "MARY JEN",
+      "lastName": "RVOR",
+      "gender": "Female",
+      "dateOfBirth": "1963-04-16",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "182 TEST DATA DO NOT DELIVER",
+          "line5": "LONDON",
+          "postcode": "G1 1XW"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Expired"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "BE",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2017-07-13",
+        "expiryDate": "2032-08-10",
+        "restrictions": [
+          {
+            "restrictionCode": "101",
+            "restrictionLiteral": "Not for hire or reward"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP30",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2017-01-23",
+        "penaltyPoints": 5
+      }
+    ],
+    "token": {
+      "validFromDate": "2002-02-28",
+      "validToDate": "2032-05-17",
+      "issueNumber": "70"
+    }
+  },
+  {
+    "id": "DL016",
+    "driver": {
+      "drivingLicenceNumber": "KKHBUG486893ILW",
+      "firstNames": "ROBART",
+      "lastName": "BROWN",
+      "gender": "Male",
+      "dateOfBirth": "1955-08-06",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "18 TEST DATA DO NOT DELIVER",
+          "line5": "GREAT YARMOUTH",
+          "postcode": "M1 1AE"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Suspended"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "C",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2014-06-26",
+        "expiryDate": "2030-04-19",
+        "restrictions": [
+          {
+            "restrictionCode": "119",
+            "restrictionLiteral": "Emergency vehicles only"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "CU80",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2016-04-04",
+        "penaltyPoints": 3
+      }
+    ],
+    "token": {
+      "validFromDate": "2019-11-29",
+      "validToDate": "2039-04-27",
+      "issueNumber": "98"
+    }
+  },
+  {
+    "id": "DL017",
+    "driver": {
+      "drivingLicenceNumber": "QCBPWA171620W76",
+      "firstNames": "SAMANTHA",
+      "lastName": "HAZE",
+      "gender": "Female",
+      "dateOfBirth": "1972-09-12",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "121 TEST DATA DO NOT DELIVER",
+          "line5": "BIRMINGHAM",
+          "postcode": "G1 1XW"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Suspended"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "C",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2011-09-28",
+        "expiryDate": "2037-07-11",
+        "restrictions": [
+          {
+            "restrictionCode": "79(03)",
+            "restrictionLiteral": "Restricted to tricycles"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP30",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2019-03-14",
+        "penaltyPoints": 6
+      }
+    ],
+    "token": {
+      "validFromDate": "1991-05-28",
+      "validToDate": "2031-11-21",
+      "issueNumber": "73"
+    }
+  },
+  {
+    "id": "DL018",
+    "driver": {
+      "drivingLicenceNumber": "FVZHIE077916MO8",
+      "firstNames": "BKJPRHVL BKETZMIX",
+      "lastName": "QDEI",
+      "gender": "Female",
+      "dateOfBirth": "1978-03-26",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "67 TEST DATA DO NOT DELIVER",
+          "line5": "BIRMINGHAM",
+          "postcode": "NR30 4BH"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Suspended"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "BE",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2017-08-23",
+        "expiryDate": "2030-08-15",
+        "restrictions": [
+          {
+            "restrictionCode": "79(03)",
+            "restrictionLiteral": "Restricted to tricycles"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP50",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2023-03-20",
+        "penaltyPoints": 6
+      }
+    ],
+    "token": {
+      "validFromDate": "2001-03-04",
+      "validToDate": "2033-02-17",
+      "issueNumber": "60"
+    }
+  },
+  {
+    "id": "DL019",
+    "driver": {
+      "drivingLicenceNumber": "SKOQLY644809DTX",
+      "firstNames": "DKIY BPXRDLY",
+      "lastName": "JEPPDPST",
+      "gender": "Male",
+      "dateOfBirth": "1975-04-10",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "119 TEST DATA DO NOT DELIVER",
+          "line5": "LONDON",
+          "postcode": "G1 1XW"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Valid"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "C",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2018-10-21",
+        "expiryDate": "2034-03-09",
+        "restrictions": [
+          {
+            "restrictionCode": "119",
+            "restrictionLiteral": "Emergency vehicles only"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "DR10",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2020-08-13",
+        "penaltyPoints": 3
+      }
+    ],
+    "token": {
+      "validFromDate": "1992-10-29",
+      "validToDate": "2031-07-27",
+      "issueNumber": "99"
+    }
+  },
+  {
+    "id": "DL020",
+    "driver": {
+      "drivingLicenceNumber": "ETVEXW3618062BI",
+      "firstNames": "AHIH HHRF",
+      "lastName": "ANBBEC",
+      "gender": "Male",
+      "dateOfBirth": "1986-08-26",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "33 TEST DATA DO NOT DELIVER",
+          "line5": "LONDON",
+          "postcode": "NR30 4BH"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Suspended"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "A",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2018-01-24",
+        "expiryDate": "2038-05-13",
+        "restrictions": [
+          {
+            "restrictionCode": "79(03)",
+            "restrictionLiteral": "Restricted to tricycles"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "CU80",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2017-03-01",
+        "penaltyPoints": 5
+      }
+    ],
+    "token": {
+      "validFromDate": "1993-08-26",
+      "validToDate": "2036-09-07",
+      "issueNumber": "89"
+    }
+  },
+  {
+    "id": "DL021",
+    "driver": {
+      "drivingLicenceNumber": "PJKHAJ312909E5J",
+      "firstNames": "VPKLVKMD FRPQX",
+      "lastName": "IZHKNE",
+      "gender": "Male",
+      "dateOfBirth": "1991-09-07",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "56 TEST DATA DO NOT DELIVER",
+          "line5": "GREAT YARMOUTH",
+          "postcode": "E1 6AN"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Valid"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "B",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2016-10-24",
+        "expiryDate": "2031-05-29",
+        "restrictions": [
+          {
+            "restrictionCode": "101",
+            "restrictionLiteral": "Not for hire or reward"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP30",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2015-08-23",
+        "penaltyPoints": 4
+      }
+    ],
+    "token": {
+      "validFromDate": "1996-11-13",
+      "validToDate": "2040-04-15",
+      "issueNumber": "59"
+    }
+  },
+  {
+    "id": "DL022",
+    "driver": {
+      "drivingLicenceNumber": "OGSLVQ093831FUZ",
+      "firstNames": "YIWP BVGKI",
+      "lastName": "KLCFBXNQ",
+      "gender": "Female",
+      "dateOfBirth": "1997-12-07",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "44 TEST DATA DO NOT DELIVER",
+          "line5": "BIRMINGHAM",
+          "postcode": "E1 6AN"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Suspended"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "D",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2015-08-05",
+        "expiryDate": "2031-05-01",
+        "restrictions": [
+          {
+            "restrictionCode": "119",
+            "restrictionLiteral": "Emergency vehicles only"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "DR10",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2022-02-28",
+        "penaltyPoints": 2
+      }
+    ],
+    "token": {
+      "validFromDate": "1993-06-27",
+      "validToDate": "2033-05-29",
+      "issueNumber": "32"
+    }
+  },
+  {
+    "id": "DL023",
+    "driver": {
+      "drivingLicenceNumber": "LZBFGX519684IWJ",
+      "firstNames": "VWGC BPNM",
+      "lastName": "MDDCZD",
+      "gender": "Male",
+      "dateOfBirth": "1967-08-22",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "179 TEST DATA DO NOT DELIVER",
+          "line5": "BIRMINGHAM",
+          "postcode": "M1 1AE"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Valid"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "B",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2018-11-12",
+        "expiryDate": "2032-05-10",
+        "restrictions": [
+          {
+            "restrictionCode": "119",
+            "restrictionLiteral": "Emergency vehicles only"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "CU80",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2023-08-21",
+        "penaltyPoints": 2
+      }
+    ],
+    "token": {
+      "validFromDate": "1996-09-03",
+      "validToDate": "2038-07-22",
+      "issueNumber": "53"
+    }
+  },
+  {
+    "id": "DL024",
+    "driver": {
+      "drivingLicenceNumber": "QPYEBU037001Q6K",
+      "firstNames": "MWCTM PWTSRDXJ",
+      "lastName": "XIQYLUC",
+      "gender": "Male",
+      "dateOfBirth": "1954-01-31",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "104 TEST DATA DO NOT DELIVER",
+          "line5": "BIRMINGHAM",
+          "postcode": "NR30 4BH"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Valid"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "C",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2012-02-01",
+        "expiryDate": "2035-12-20",
+        "restrictions": [
+          {
+            "restrictionCode": "79(03)",
+            "restrictionLiteral": "Restricted to tricycles"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "DR10",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2020-08-13",
+        "penaltyPoints": 4
+      }
+    ],
+    "token": {
+      "validFromDate": "2014-11-18",
+      "validToDate": "2036-06-21",
+      "issueNumber": "33"
+    }
+  },
+  {
+    "id": "DL025",
+    "driver": {
+      "drivingLicenceNumber": "CNCFID3529330MN",
+      "firstNames": "XGMR ZLWFAPT",
+      "lastName": "JABBADFQ",
+      "gender": "Male",
+      "dateOfBirth": "1958-03-04",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "119 TEST DATA DO NOT DELIVER",
+          "line5": "LONDON",
+          "postcode": "NR30 4BH"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Suspended"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "B",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2020-06-01",
+        "expiryDate": "2038-05-25",
+        "restrictions": [
+          {
+            "restrictionCode": "101",
+            "restrictionLiteral": "Not for hire or reward"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "CU80",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2017-10-23",
+        "penaltyPoints": 3
+      }
+    ],
+    "token": {
+      "validFromDate": "2019-07-20",
+      "validToDate": "2040-02-28",
+      "issueNumber": "55"
+    }
+  },
+  {
+    "id": "DL026",
+    "driver": {
+      "drivingLicenceNumber": "TZUADJ956262N2E",
+      "firstNames": "UIAV STCXUNDP",
+      "lastName": "MIVZBVDH",
+      "gender": "Female",
+      "dateOfBirth": "1991-09-23",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "161 TEST DATA DO NOT DELIVER",
+          "line5": "GREAT YARMOUTH",
+          "postcode": "E1 6AN"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Valid"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "B",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2018-01-05",
+        "expiryDate": "2036-08-31",
+        "restrictions": [
+          {
+            "restrictionCode": "79(03)",
+            "restrictionLiteral": "Restricted to tricycles"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP50",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2021-07-18",
+        "penaltyPoints": 4
+      }
+    ],
+    "token": {
+      "validFromDate": "2010-08-04",
+      "validToDate": "2031-08-24",
+      "issueNumber": "80"
+    }
+  },
+  {
+    "id": "DL027",
+    "driver": {
+      "drivingLicenceNumber": "MDJECO084278BH8",
+      "firstNames": "LSLZBSAH RZOVXI",
+      "lastName": "BECSAZ",
+      "gender": "Male",
+      "dateOfBirth": "1999-09-16",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "174 TEST DATA DO NOT DELIVER",
+          "line5": "LONDON",
+          "postcode": "E1 6AN"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Valid"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "B",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2019-05-06",
+        "expiryDate": "2039-07-23",
+        "restrictions": [
+          {
+            "restrictionCode": "101",
+            "restrictionLiteral": "Not for hire or reward"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP50",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2017-02-19",
+        "penaltyPoints": 6
+      }
+    ],
+    "token": {
+      "validFromDate": "2017-11-12",
+      "validToDate": "2035-08-02",
+      "issueNumber": "11"
+    }
+  },
+  {
+    "id": "DL028",
+    "driver": {
+      "drivingLicenceNumber": "WWIRMU585030LM1",
+      "firstNames": "EPTI RXKOFXIC",
+      "lastName": "FOEVDUNN",
+      "gender": "Female",
+      "dateOfBirth": "1992-06-15",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "174 TEST DATA DO NOT DELIVER",
+          "line5": "LONDON",
+          "postcode": "NR30 4BH"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Suspended"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "A",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2011-12-17",
+        "expiryDate": "2038-06-29",
+        "restrictions": [
+          {
+            "restrictionCode": "101",
+            "restrictionLiteral": "Not for hire or reward"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP50",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2016-03-24",
+        "penaltyPoints": 2
+      }
+    ],
+    "token": {
+      "validFromDate": "1991-04-15",
+      "validToDate": "2034-08-30",
+      "issueNumber": "45"
+    }
+  },
+  {
+    "id": "DL029",
+    "driver": {
+      "drivingLicenceNumber": "IVWKNK674710ES0",
+      "firstNames": "CMZVCMVX RDKWJ",
+      "lastName": "PMROGJ",
+      "gender": "Male",
+      "dateOfBirth": "1950-08-21",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "162 TEST DATA DO NOT DELIVER",
+          "line5": "LONDON",
+          "postcode": "NR30 4BH"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Expired"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "A",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2011-04-29",
+        "expiryDate": "2039-08-29",
+        "restrictions": [
+          {
+            "restrictionCode": "79(03)",
+            "restrictionLiteral": "Restricted to tricycles"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "CU80",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2020-05-27",
+        "penaltyPoints": 5
+      }
+    ],
+    "token": {
+      "validFromDate": "2011-04-02",
+      "validToDate": "2032-09-08",
+      "issueNumber": "5"
+    }
+  },
+  {
+    "id": "DL030",
+    "driver": {
+      "drivingLicenceNumber": "VZGGNR237082OP3",
+      "firstNames": "NZPEUN JGXT",
+      "lastName": "OYZH",
+      "gender": "Male",
+      "dateOfBirth": "1968-07-29",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "10 TEST DATA DO NOT DELIVER",
+          "line5": "MANCHESTER",
+          "postcode": "NR30 4BH"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Suspended"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "BE",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2014-05-17",
+        "expiryDate": "2032-05-01",
+        "restrictions": [
+          {
+            "restrictionCode": "119",
+            "restrictionLiteral": "Emergency vehicles only"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP30",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2017-10-10",
+        "penaltyPoints": 4
+      }
+    ],
+    "token": {
+      "validFromDate": "2004-09-03",
+      "validToDate": "2034-09-26",
+      "issueNumber": "90"
+    }
+  },
+  {
+    "id": "DL031",
+    "driver": {
+      "drivingLicenceNumber": "BMIQHH1803306TC",
+      "firstNames": "CIHQBPXO ARZBCYXJ",
+      "lastName": "KHHJXQ",
+      "gender": "Male",
+      "dateOfBirth": "1959-08-01",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "124 TEST DATA DO NOT DELIVER",
+          "line5": "GREAT YARMOUTH",
+          "postcode": "G1 1XW"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Expired"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "C",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2017-09-06",
+        "expiryDate": "2030-10-05",
+        "restrictions": [
+          {
+            "restrictionCode": "79(03)",
+            "restrictionLiteral": "Restricted to tricycles"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP50",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2015-01-31",
+        "penaltyPoints": 2
+      }
+    ],
+    "token": {
+      "validFromDate": "2005-03-16",
+      "validToDate": "2036-04-22",
+      "issueNumber": "84"
+    }
+  },
+  {
+    "id": "DL032",
+    "driver": {
+      "drivingLicenceNumber": "TWYRYT754563V1Y",
+      "firstNames": "TLJUPF ZXDDDA",
+      "lastName": "GSZV",
+      "gender": "Male",
+      "dateOfBirth": "1979-10-14",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "60 TEST DATA DO NOT DELIVER",
+          "line5": "GLASGOW",
+          "postcode": "B1 1HQ"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Valid"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "B",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2019-06-22",
+        "expiryDate": "2036-07-24",
+        "restrictions": [
+          {
+            "restrictionCode": "101",
+            "restrictionLiteral": "Not for hire or reward"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP30",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2023-01-07",
+        "penaltyPoints": 2
+      }
+    ],
+    "token": {
+      "validFromDate": "2004-10-11",
+      "validToDate": "2034-02-09",
+      "issueNumber": "31"
+    }
+  },
+  {
+    "id": "DL033",
+    "driver": {
+      "drivingLicenceNumber": "GVMBJE928724E3B",
+      "firstNames": "XDFYGBK KWCFAH",
+      "lastName": "WBDMFH",
+      "gender": "Female",
+      "dateOfBirth": "1999-11-24",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "28 TEST DATA DO NOT DELIVER",
+          "line5": "GLASGOW",
+          "postcode": "M1 1AE"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Valid"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "D",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2014-07-30",
+        "expiryDate": "2031-03-15",
+        "restrictions": [
+          {
+            "restrictionCode": "101",
+            "restrictionLiteral": "Not for hire or reward"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "CU80",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2022-10-25",
+        "penaltyPoints": 4
+      }
+    ],
+    "token": {
+      "validFromDate": "2006-01-28",
+      "validToDate": "2035-08-26",
+      "issueNumber": "55"
+    }
+  },
+  {
+    "id": "DL034",
+    "driver": {
+      "drivingLicenceNumber": "TFVPJB253618IBG",
+      "firstNames": "HVTDGI XKFVXTG",
+      "lastName": "HNPHBD",
+      "gender": "Female",
+      "dateOfBirth": "1971-12-15",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "56 TEST DATA DO NOT DELIVER",
+          "line5": "LONDON",
+          "postcode": "B1 1HQ"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Valid"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "B",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2017-03-26",
+        "expiryDate": "2032-06-08",
+        "restrictions": [
+          {
+            "restrictionCode": "79(03)",
+            "restrictionLiteral": "Restricted to tricycles"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "DR10",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2020-07-05",
+        "penaltyPoints": 6
+      }
+    ],
+    "token": {
+      "validFromDate": "2015-01-14",
+      "validToDate": "2031-08-21",
+      "issueNumber": "28"
+    }
+  },
+  {
+    "id": "DL035",
+    "driver": {
+      "drivingLicenceNumber": "CUEKRK0225651VN",
+      "firstNames": "YRMXMUPZ ZHAKWHY",
+      "lastName": "XRKHTP",
+      "gender": "Male",
+      "dateOfBirth": "1951-03-08",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "37 TEST DATA DO NOT DELIVER",
+          "line5": "MANCHESTER",
+          "postcode": "NR30 4BH"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Expired"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "C",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2011-06-15",
+        "expiryDate": "2035-02-14",
+        "restrictions": [
+          {
+            "restrictionCode": "79(03)",
+            "restrictionLiteral": "Restricted to tricycles"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP50",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2016-05-07",
+        "penaltyPoints": 4
+      }
+    ],
+    "token": {
+      "validFromDate": "1999-07-28",
+      "validToDate": "2030-11-03",
+      "issueNumber": "11"
+    }
+  },
+  {
+    "id": "DL036",
+    "driver": {
+      "drivingLicenceNumber": "TPRTID575540KMR",
+      "firstNames": "BVVGL GJQS",
+      "lastName": "EOTFTUNT",
+      "gender": "Male",
+      "dateOfBirth": "1963-11-29",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "186 TEST DATA DO NOT DELIVER",
+          "line5": "GLASGOW",
+          "postcode": "E1 6AN"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Suspended"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "A",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2010-06-17",
+        "expiryDate": "2038-08-21",
+        "restrictions": [
+          {
+            "restrictionCode": "101",
+            "restrictionLiteral": "Not for hire or reward"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP50",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2021-07-24",
+        "penaltyPoints": 6
+      }
+    ],
+    "token": {
+      "validFromDate": "1990-10-25",
+      "validToDate": "2034-12-05",
+      "issueNumber": "17"
+    }
+  },
+  {
+    "id": "DL037",
+    "driver": {
+      "drivingLicenceNumber": "VVQBAA685189NB7",
+      "firstNames": "CEKGAT PDFUGTTN",
+      "lastName": "KEFVYGI",
+      "gender": "Male",
+      "dateOfBirth": "1975-05-27",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "40 TEST DATA DO NOT DELIVER",
+          "line5": "LONDON",
+          "postcode": "E1 6AN"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Expired"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "B",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2013-02-04",
+        "expiryDate": "2030-02-20",
+        "restrictions": [
+          {
+            "restrictionCode": "79(03)",
+            "restrictionLiteral": "Restricted to tricycles"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "DR10",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2020-01-11",
+        "penaltyPoints": 6
+      }
+    ],
+    "token": {
+      "validFromDate": "1994-05-04",
+      "validToDate": "2030-06-03",
+      "issueNumber": "28"
+    }
+  },
+  {
+    "id": "DL038",
+    "driver": {
+      "drivingLicenceNumber": "TZTOMN313569J5C",
+      "firstNames": "ISUEQPXP QQFGZDK",
+      "lastName": "INIG",
+      "gender": "Female",
+      "dateOfBirth": "1995-07-27",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "146 TEST DATA DO NOT DELIVER",
+          "line5": "MANCHESTER",
+          "postcode": "NR30 4BH"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Suspended"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "C",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2015-07-05",
+        "expiryDate": "2032-12-02",
+        "restrictions": [
+          {
+            "restrictionCode": "79(03)",
+            "restrictionLiteral": "Restricted to tricycles"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP30",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2022-08-05",
+        "penaltyPoints": 3
+      }
+    ],
+    "token": {
+      "validFromDate": "2005-12-01",
+      "validToDate": "2034-05-20",
+      "issueNumber": "79"
+    }
+  },
+  {
+    "id": "DL039",
+    "driver": {
+      "drivingLicenceNumber": "UQLNFK178279T51",
+      "firstNames": "LIYKVZGK SAPJBNA",
+      "lastName": "MFOATM",
+      "gender": "Male",
+      "dateOfBirth": "2000-09-24",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "51 TEST DATA DO NOT DELIVER",
+          "line5": "GREAT YARMOUTH",
+          "postcode": "B1 1HQ"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Expired"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "D",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2018-03-24",
+        "expiryDate": "2038-11-10",
+        "restrictions": [
+          {
+            "restrictionCode": "101",
+            "restrictionLiteral": "Not for hire or reward"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "DR10",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2015-10-27",
+        "penaltyPoints": 5
+      }
+    ],
+    "token": {
+      "validFromDate": "1993-07-28",
+      "validToDate": "2037-01-06",
+      "issueNumber": "3"
+    }
+  },
+  {
+    "id": "DL040",
+    "driver": {
+      "drivingLicenceNumber": "GKLPQZ543337A97",
+      "firstNames": "KXBQSE CSQHK",
+      "lastName": "YXWE",
+      "gender": "Female",
+      "dateOfBirth": "1979-08-22",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "68 TEST DATA DO NOT DELIVER",
+          "line5": "MANCHESTER",
+          "postcode": "E1 6AN"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Suspended"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "C",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2016-06-30",
+        "expiryDate": "2031-10-11",
+        "restrictions": [
+          {
+            "restrictionCode": "119",
+            "restrictionLiteral": "Emergency vehicles only"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "DR10",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2023-04-02",
+        "penaltyPoints": 5
+      }
+    ],
+    "token": {
+      "validFromDate": "1995-10-05",
+      "validToDate": "2033-01-29",
+      "issueNumber": "39"
+    }
+  },
+  {
+    "id": "DL041",
+    "driver": {
+      "drivingLicenceNumber": "FOQFDO2956664N9",
+      "firstNames": "OFCBNS UNKLNW",
+      "lastName": "PPKTS",
+      "gender": "Female",
+      "dateOfBirth": "1971-05-07",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "187 TEST DATA DO NOT DELIVER",
+          "line5": "LONDON",
+          "postcode": "B1 1HQ"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Expired"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "D",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2020-07-09",
+        "expiryDate": "2038-05-26",
+        "restrictions": [
+          {
+            "restrictionCode": "119",
+            "restrictionLiteral": "Emergency vehicles only"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP50",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2018-03-01",
+        "penaltyPoints": 4
+      }
+    ],
+    "token": {
+      "validFromDate": "2000-08-02",
+      "validToDate": "2030-08-05",
+      "issueNumber": "99"
+    }
+  },
+  {
+    "id": "DL042",
+    "driver": {
+      "drivingLicenceNumber": "UAVSFU4608543W9",
+      "firstNames": "CTQL UDDO",
+      "lastName": "WRYC",
+      "gender": "Female",
+      "dateOfBirth": "1971-04-30",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "105 TEST DATA DO NOT DELIVER",
+          "line5": "LONDON",
+          "postcode": "E1 6AN"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Valid"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "B",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2018-11-01",
+        "expiryDate": "2032-05-02",
+        "restrictions": [
+          {
+            "restrictionCode": "119",
+            "restrictionLiteral": "Emergency vehicles only"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP30",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2023-10-28",
+        "penaltyPoints": 6
+      }
+    ],
+    "token": {
+      "validFromDate": "2012-03-30",
+      "validToDate": "2030-09-10",
+      "issueNumber": "80"
+    }
+  },
+  {
+    "id": "DL043",
+    "driver": {
+      "drivingLicenceNumber": "XMYIYY3120686M8",
+      "firstNames": "JRNZ NRANXSMO",
+      "lastName": "GAFHQJ",
+      "gender": "Female",
+      "dateOfBirth": "1993-07-24",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "172 TEST DATA DO NOT DELIVER",
+          "line5": "MANCHESTER",
+          "postcode": "B1 1HQ"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Expired"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "A",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2013-01-19",
+        "expiryDate": "2035-05-29",
+        "restrictions": [
+          {
+            "restrictionCode": "79(03)",
+            "restrictionLiteral": "Restricted to tricycles"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP50",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2017-11-27",
+        "penaltyPoints": 4
+      }
+    ],
+    "token": {
+      "validFromDate": "2005-07-21",
+      "validToDate": "2036-07-24",
+      "issueNumber": "14"
+    }
+  },
+  {
+    "id": "DL044",
+    "driver": {
+      "drivingLicenceNumber": "BTQVLX721144T56",
+      "firstNames": "TMLK RPRM",
+      "lastName": "NYXVZM",
+      "gender": "Male",
+      "dateOfBirth": "1977-08-29",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "121 TEST DATA DO NOT DELIVER",
+          "line5": "MANCHESTER",
+          "postcode": "NR30 4BH"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Valid"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "D",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2015-01-01",
+        "expiryDate": "2034-03-25",
+        "restrictions": [
+          {
+            "restrictionCode": "101",
+            "restrictionLiteral": "Not for hire or reward"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP50",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2022-05-21",
+        "penaltyPoints": 5
+      }
+    ],
+    "token": {
+      "validFromDate": "1995-06-27",
+      "validToDate": "2039-09-24",
+      "issueNumber": "95"
+    }
+  },
+  {
+    "id": "DL045",
+    "driver": {
+      "drivingLicenceNumber": "VWZTZZ585341KAT",
+      "firstNames": "WBNZ HLNRECW",
+      "lastName": "DFVQEFM",
+      "gender": "Male",
+      "dateOfBirth": "1964-08-28",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "200 TEST DATA DO NOT DELIVER",
+          "line5": "GLASGOW",
+          "postcode": "B1 1HQ"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Expired"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "C",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2016-02-26",
+        "expiryDate": "2039-05-21",
+        "restrictions": [
+          {
+            "restrictionCode": "101",
+            "restrictionLiteral": "Not for hire or reward"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP50",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2021-02-18",
+        "penaltyPoints": 3
+      }
+    ],
+    "token": {
+      "validFromDate": "2017-06-01",
+      "validToDate": "2035-09-03",
+      "issueNumber": "21"
+    }
+  },
+  {
+    "id": "DL046",
+    "driver": {
+      "drivingLicenceNumber": "EWCEFL316488KE4",
+      "firstNames": "BJME BFJVEW",
+      "lastName": "RUNJ",
+      "gender": "Male",
+      "dateOfBirth": "1982-07-14",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "187 TEST DATA DO NOT DELIVER",
+          "line5": "GREAT YARMOUTH",
+          "postcode": "NR30 4BH"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Expired"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "BE",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2013-07-04",
+        "expiryDate": "2039-01-13",
+        "restrictions": [
+          {
+            "restrictionCode": "101",
+            "restrictionLiteral": "Not for hire or reward"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP50",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2022-03-06",
+        "penaltyPoints": 3
+      }
+    ],
+    "token": {
+      "validFromDate": "2018-11-20",
+      "validToDate": "2038-09-29",
+      "issueNumber": "9"
+    }
+  },
+  {
+    "id": "DL047",
+    "driver": {
+      "drivingLicenceNumber": "EDOMXK701515QNN",
+      "firstNames": "BWYAWM XXAWZV",
+      "lastName": "FDAYP",
+      "gender": "Female",
+      "dateOfBirth": "1953-03-04",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "141 TEST DATA DO NOT DELIVER",
+          "line5": "BIRMINGHAM",
+          "postcode": "B1 1HQ"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Expired"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "B",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2011-10-17",
+        "expiryDate": "2038-07-30",
+        "restrictions": [
+          {
+            "restrictionCode": "101",
+            "restrictionLiteral": "Not for hire or reward"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "SP50",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2017-11-13",
+        "penaltyPoints": 6
+      }
+    ],
+    "token": {
+      "validFromDate": "1999-09-05",
+      "validToDate": "2038-05-19",
+      "issueNumber": "83"
+    }
+  },
+  {
+    "id": "DL048",
+    "driver": {
+      "drivingLicenceNumber": "MHOJEN1285424DS",
+      "firstNames": "PRRMJR CRTJSRQ",
+      "lastName": "XERFPFT",
+      "gender": "Male",
+      "dateOfBirth": "1951-08-23",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "178 TEST DATA DO NOT DELIVER",
+          "line5": "MANCHESTER",
+          "postcode": "G1 1XW"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Suspended"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "D",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2017-09-20",
+        "expiryDate": "2040-05-11",
+        "restrictions": [
+          {
+            "restrictionCode": "119",
+            "restrictionLiteral": "Emergency vehicles only"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "CU80",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2018-10-03",
+        "penaltyPoints": 3
+      }
+    ],
+    "token": {
+      "validFromDate": "2004-01-09",
+      "validToDate": "2032-05-11",
+      "issueNumber": "48"
+    }
+  },
+  {
+    "id": "DL049",
+    "driver": {
+      "drivingLicenceNumber": "FHPKZA948990UY4",
+      "firstNames": "LOLF LKALNIMU",
+      "lastName": "RUYJ",
+      "gender": "Female",
+      "dateOfBirth": "1958-06-09",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "196 TEST DATA DO NOT DELIVER",
+          "line5": "LONDON",
+          "postcode": "E1 6AN"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Valid"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "C",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2010-08-19",
+        "expiryDate": "2031-06-23",
+        "restrictions": [
+          {
+            "restrictionCode": "79(03)",
+            "restrictionLiteral": "Restricted to tricycles"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "CU80",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2023-09-12",
+        "penaltyPoints": 6
+      }
+    ],
+    "token": {
+      "validFromDate": "2000-01-14",
+      "validToDate": "2036-04-11",
+      "issueNumber": "83"
+    }
+  },
+  {
+    "id": "DL050",
+    "driver": {
+      "drivingLicenceNumber": "ILJJKJ60720691A",
+      "firstNames": "QAPQXCO OZCNLI",
+      "lastName": "GLJH",
+      "gender": "Male",
+      "dateOfBirth": "1994-05-16",
+      "address": {
+        "unstructuredAddress": {
+          "line1": "40 TEST DATA DO NOT DELIVER",
+          "line5": "GREAT YARMOUTH",
+          "postcode": "NR30 4BH"
+        }
+      }
+    },
+    "licence": {
+      "type": "Full",
+      "status": "Valid"
+    },
+    "entitlement": [
+      {
+        "categoryCode": "BE",
+        "categoryLegalLiteral": "Sample category description",
+        "categoryType": "Full",
+        "fromDate": "2011-03-01",
+        "expiryDate": "2034-04-02",
+        "restrictions": [
+          {
+            "restrictionCode": "101",
+            "restrictionLiteral": "Not for hire or reward"
+          }
+        ]
+      }
+    ],
+    "endorsements": [
+      {
+        "offenceCode": "CU80",
+        "offenceLegalLiteral": "Exceeding statutory speed limit on a public road",
+        "offenceDate": "2017-07-09",
+        "penaltyPoints": 3
+      }
+    ],
+    "token": {
+      "validFromDate": "1993-10-25",
+      "validToDate": "2031-05-14",
+      "issueNumber": "7"
+    }
+  }
+]

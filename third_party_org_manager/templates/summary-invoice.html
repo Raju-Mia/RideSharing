@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.7;
+        position: relative;
+      }
+
+      th,
+      td,
+      p {
+        font-size: 10px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+      }
+      .invoice {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .invoice-info {
+        margin-bottom: 10px;
+      }
+
+      .invoice-title {
+        font-size: 32px;
+        line-height: 1;
+        margin-bottom: 10px;
+      }
+
+      .company-details {
+        text-align: right;
+      }
+
+      .company-link {
+        color: #1877f2;
+        text-decoration: none;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+
+      td,
+      th {
+        padding: 12px 8px;
+      }
+
+      th {
+        border-top: 1px solid #d7dae0;
+        border-bottom: 1px solid #d7dae0;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+      }
+
+      td:first-child,
+      th:first-child {
+        padding-left: 0px;
+      }
+      td:last-child,
+      th:last-child {
+        text-align: right;
+        padding-right: 0px;
+      }
+
+      tr:last-child {
+        border-bottom: 1px solid #d7dae0;
+      }
+
+      
+      .totals {
+        width: 300px;
+        margin-left: auto;
+        margin-bottom: 40px;
+      }
+
+      .totals table {
+        margin-bottom: 0;
+        text-align: left;
+      }
+
+      .totals table tr td {
+        margin: 0;
+        padding: 0.25rem 0;
+      }
+
+      .totals table tr:last-child {
+        border: none;
+      }
+
+      .totals td:last-child {
+        text-align: right;
+      }
+
+      .total-row {
+        font-weight: bold;
+      }
+
+      .powered {
+        text-align: center;
+        font-size: 1rem;
+      }
+
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+          padding: 0;
+        }
+        .header,
+        .totals,
+        .payment-info {
+          page-break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="invoice">
+          <div class="invoice-info">
+            <h1 class="invoice-title">SUMMARY INVOICE</h1>
+            <p>Summary Invoice No: <strong>#{{ summary_invoice.invoice_no }}</strong></p>
+            <p>Date Created: <strong>{{ summary_invoice.created_at|date:"d/m/Y" }} {{ summary_invoice.created_at|time:"H:i" }}</strong></p>
+          </div>
+          <div class="billed-to">
+            <h4>Billed to:</h4>
+            <p><strong>{{ summary_invoice.customer.company_name }}</strong></p>
+          </div>
+        </div>
+        <div class="company-details">
+          <h2>{{ summary_invoice.organization.name | upper }}</h2>
+          <p>
+            {{ summary_invoice.organization.address_line1 }},
+            {% if summary_invoice.organization.city %}
+                {{ summary_invoice.organization.city }}, 
+            {% endif %}
+            {% if summary_invoice.organization.state %}
+                {{ summary_invoice.organization.state }}, 
+            {% endif %}
+            {% if summary_invoice.organization.country %}
+                {{ summary_invoice.organization.country }}, 
+            {% endif %}
+            {% if summary_invoice.organization.postal_code %}
+                {{ summary_invoice.organization.postal_code }}
+            {% endif %}
+        </p>
+        
+          <p>Phone: {{ summary_invoice.organization.phone_number }}</p>
+          <p>Email: {{ summary_invoice.organization.email }}</p>
+
+
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>INVOICE NO.</th>
+            <th>INVOICE PERIOD</th>
+            <th>CLIENT NAME</th>
+            <th>AMOUNT</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          {% for data in invoice_data %}
+          <tr>
+              <td>{{ data.invoice.invoice_no }}</td>
+              <td>
+                  {{ data.first_booking_time|date:"d/m/Y" }} {{ data.first_booking_time|time:"H:i" }} 
+                  to 
+                  {{ data.last_booking_time|date:"d/m/Y" }} {{ data.last_booking_time|time:"H:i" }}
+              </td>
+              <td>{{ data.invoice.customer.name }}</td>
+              <td>£{{ data.invoice.total }}</td>
+          </tr>
+          {% endfor %}
+
+
+
+        </tbody>
+      </table>
+
+      <div class="totals">
+        <table>
+          <tr class="total-row">
+              <td><strong>Total</strong></td>
+              <td><strong>£{{ summary_invoice.total|floatformat:2 }}</strong></td>
+          </tr>
+          <tr>
+
+            <td></td>
+
+            <td>(Inclusive VAT & Service Charge)</td>
+
+          </tr>
+      </table>
+      
+      </div>
+
+      <p class="powered">Powered by Rydr Limited</p>
+    </div>
+  </body>
+</html>

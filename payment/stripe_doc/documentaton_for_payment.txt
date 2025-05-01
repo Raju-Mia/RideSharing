@@ -1,0 +1,64 @@
+Here’s a detailed explanation of the work process:
+
+### 1. **Initial Setup**
+   - **User Registration**: When a user registers or logs in, they are linked to a Stripe customer account. The user's default payment method is saved (e.g., their credit card).
+   - **Trip Creation**: A user books a trip, and a `Trip` object is created in the system with details like the trip's final fare, driver, and status.
+
+### 2. **Hold Payment Process**
+   - **Trip Status**: When a trip is booked, it goes through different statuses like "hold," "complete," etc.
+   - **Holding the Payment**:
+     - When the trip status changes to "hold," the `HoldPaymentView` is triggered.
+     - **Request Handling**:
+       - The API receives a POST request with the `trip_id` to identify the trip.
+       - It verifies that the trip status is indeed "hold."
+     - **Creating Payment Intent**:
+       - A `PaymentIntent` is created via Stripe to hold (authorize) the amount of the trip’s final fare on the user's default payment method.
+       - The payment amount is specified in GBP, but it can accept payments in other currencies (like USD). Stripe will automatically convert the currency based on the user’s card and the default currency set in your Stripe account.
+       - The `capture_method` is set to `'manual'`, meaning the amount is authorized (held) but not captured yet. This authorization allows you to confirm the funds are available without completing the charge.
+     - **Saving Payment Intent**:
+       - The `PaymentIntent` ID is saved in the `Trip` object for later reference.
+       - If the payment hold is successful, the user is informed that the payment has been authorized and held.
+
+### 3. **Check Sufficient Hold (Optional)**
+   - Before completing the trip, you might want to check if the user's default card still has a sufficient hold for the final fare. This can be done using the `check_sufficient_hold` function.
+   - **Purpose**:
+     - This function retrieves the user's most recent `PaymentIntent` and checks if the hold amount is sufficient to cover the final fare.
+     - It returns `True` if the hold is sufficient, or `False` otherwise.
+
+### 4. **Complete Payment Process**
+   - **Trip Completion**:
+     - When the trip is finished, the status changes to "complete."
+   - **Capturing the Payment**:
+     - The `CompletePaymentView` is triggered when a POST request is sent with the `trip_id` for the completed trip.
+     - **Request Handling**:
+       - The API checks that the trip status is "complete."
+     - **Retrieve Payment Intent**:
+       - The previously saved `PaymentIntent` ID is used to retrieve the authorization (hold) from Stripe.
+     - **Capturing Funds**:
+       - If the `PaymentIntent` status is `'requires_capture'`, it means the hold is still valid and ready to be captured.
+       - The held amount is then captured, meaning the user's card is charged, and the funds are transferred to your Stripe account.
+     - **Fund Distribution**:
+       - The total captured amount is divided into 80% (driver) and 20% (company).
+       - **Driver Payment**: 80% of the amount is transferred to the driver's Stripe account.
+       - **Company Payment**: 20% of the amount is transferred to the company’s Stripe account.
+   - **Completion Response**:
+     - The user is informed that the payment has been captured and distributed successfully.
+
+### 5. **Outcome**
+   - The user’s card is charged only after the trip is completed.
+   - The driver and company receive their respective shares of the payment.
+   - The entire process ensures that funds are only captured when the service is completed, reducing the risk of unauthorized charges.
+
+### **Stripe’s Role**:
+   - **Currency Conversion**: If the user's card is in USD, and the payment is in GBP, Stripe handles the conversion automatically based on real-time exchange rates.
+   - **Payment Methods**: Stripe supports various payment methods, including credit cards, debit cards, Apple Pay, Google Pay, etc. The system uses the default payment method set by the user.
+   - **Hold and Capture**: Stripe's `PaymentIntent` object is used to hold the funds during the trip and capture them once the trip is complete.
+
+### **Security and Compliance**:
+   - **PCI Compliance**: Stripe manages PCI compliance, so you don’t have to worry about storing card details securely.
+   - **Authentication**: Stripe handles authentication when necessary, like 3D Secure for certain transactions, ensuring that the payment process complies with regulations.
+
+### **Summary**:
+- **Before Trip**: The fare is held (authorized) but not charged.
+- **After Trip Completion**: The held amount is captured and distributed to the driver and company based on the agreed-upon percentages. The process ensures that the payment is secure, fair, and compliant with financial regulations.
+

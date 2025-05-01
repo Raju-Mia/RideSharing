@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Invoice</title>
+    <style>
+      {% comment %} Global Styles {% endcomment %}
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.7;
+        position: relative;
+      }
+
+      th,
+      td,
+      p {
+        font-size: 10px;
+      }
+
+
+      {% comment %} Header Styles {% endcomment %}
+      .header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+      }
+      .invoice {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .invoice-title {
+        font-size: 32px;
+        line-height: 1;
+        margin-bottom: 10px;
+      }
+
+      .invoice-info {
+        margin-bottom: 10px;
+
+      }
+
+      .company-link {
+        color: #1877f2;
+        text-decoration: none;
+      }
+
+      .company-details {
+        text-align: right;
+      }
+
+      {% comment %} Table Styles {% endcomment %}
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+
+      td, th {
+        padding: 12px 8px;
+      }
+
+      th {
+        border-top: 1px solid #d7dae0;
+        border-bottom: 1px solid #d7dae0;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+      }
+
+      td:first-child, th:first-child {
+        padding-left: 0px;
+      }
+      td:last-child, th:last-child {
+        text-align: right;
+        padding-right: 0px;
+      }
+
+      tr:last-child {
+        border-bottom: 1px solid #d7dae0;
+      }
+
+      {% comment %} Totals Styles {% endcomment %}
+      .totals {
+        width: 300px;
+        margin-left: auto;
+        margin-bottom: 40px;
+      }
+
+      .totals table {
+        margin-bottom: 0;
+        text-align: left;
+      }
+
+      .totals table tr td {
+        margin: 0;
+        padding: 0.25rem 0;
+      }
+
+      .totals table tr:last-child {
+        border: none;
+      }
+
+      .totals td:last-child {
+        text-align: right;
+      }
+
+      .total-row {
+        font-weight: bold;
+      }
+
+      {% comment %} Footer Styles {% endcomment %}
+      .powered {
+        text-align: center;
+        font-size: 1rem;
+      }
+
+      {% comment %} Print Styles {% endcomment %}
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="invoice">
+          <div class="invoice-info">
+            <h1 class="invoice-title">INVOICE</h1>
+            <p>Invoice No: <strong>#{{ invoice.invoice_no }}</strong></p>
+            <p>Date Created: <strong>{{ invoice.created_at|date:"d/m/Y" }} {{ invoice.created_at|time:"H:i" }}</strong></p>
+            <p>Client Name: <strong>{{ invoice.customer.name }}</strong></p>
+          </div>
+
+          <div class="billed-to">
+            <h4>Billed to:</h4>
+            <p><strong>
+              {% if invoice.customer.company_name %}
+              {{ invoice.customer.company_name }}
+              {% else %}
+              {{ invoice.customer.name }}
+              {% endif %}
+            
+            </strong></p>
+            <p>Address: {{ invoice.customer.address }}</p>
+            <p>Invoice Period: {{ first_trip_time|date:"d/m/Y" }} {{ first_trip_time|time:"H:i" }} to {{ last_trip_time|date:"d/m/Y" }} {{ last_trip_time|time:"H:i" }}</p>
+            <p>Phone: {{ invoice.customer.phone_number }}</p>
+          </div>
+        </div>
+        <div class="company-details">
+          <h2>{{ invoice.organization.name | upper }}</h2>
+          <p>
+            {{ invoice.organization.address_line1 }},
+            {% if invoice.organization.city %}
+                {{ invoice.organization.city }}, 
+            {% endif %}
+            {% if invoice.organization.state %}
+                {{ invoice.organization.state }}, 
+            {% endif %}
+            {% if invoice.organization.country %}
+                {{ invoice.organization.country }}, 
+            {% endif %}
+            {% if invoice.organization.postal_code %}
+                {{ invoice.organization.postal_code }}
+            {% endif %}
+        </p>
+        
+          <p>Phone: {{ invoice.organization.phone_number }}</p>
+          <p>Email: {{ invoice.organization.email }}</p>
+        </div>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>DATE & TIME</th>
+            <th>PICKUP & DROP OFF</th>
+            <th>DURATION & DISTANCE</th>
+            <th>EXTRA CHARGE</th>
+            <th>
+              CAR TYPE <br />
+              NO. OF CARS
+            </th>
+            <th>TRIP TYPE</th>
+            <th>AMOUNT</th>
+          </tr>
+        </thead>
+        <tbody>
+
+
+          {% for trip in trips %}
+          <tr>
+              <td>{{ trip.pickup_time|date:"d/m/Y" }}<br /> {{ trip.pickup_time|time:"H:i" }}</td>
+              <td>From: {{ trip.pickup_location_name }}<br />To: {{ trip.final_dropoff_location_name }}</td>
+              <td>{{ trip.final_duration|floatformat:2 }} hrs.<br />{{ trip.final_distance_covered|floatformat:2 }} miles</td>
+              <td>Cong: £{{ trip.congestion_charge }}<br />Park: £{{ trip.total_extra_charge|default:"0.00" }}<br />MISC: £{{ trip.service_charge_amount|floatformat:2 }}</td>
+              <td>{{ trip.requested_vehicle_manufacturer }} {{ trip.requested_vehicle_model }}<br />No: {{ forloop.counter }}<br />Unit Fare: £{{ trip.fare|floatformat:2 }}</td>
+              <td>{{ trip.service_type }}</td>
+              <td>£{{ trip.total_amount|floatformat:2 }}</td>
+          </tr>
+          {% endfor %}
+
+
+        </tbody>
+      </table>
+
+      <div class="totals">
+        <table>
+      
+ 
+          <tr class="total-row">
+            <td>Total</td>
+            <td>£{{ invoice.total }}</td>
+          </tr>
+          <tr>
+
+            <td></td>
+
+            <td>(Inclusive VAT & Service Charge)</td>
+
+          </tr>
+        </table>
+      </div>
+
+      <p class="powered">Powered by Rydr Limited</p>
+    </div>
+  </body>
+</html>
+

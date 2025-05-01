@@ -1,0 +1,29 @@
+he provided models form a robust framework for managing notifications in a service-based platform. Here’s a breakdown of their functionality:
+
+1. FCMToken
+Manages device tokens for push notifications, categorized by device_type (Android, iOS, Web).
+Each user can have multiple tokens for different devices.
+
+2. Notification
+Core notification model that:
+Tracks recipients, senders, titles, messages, categories, and types.
+Supports multimedia (images/files), scheduling (scheduled_at), and tracking (is_read, is_seen).
+Allows metadata storage via json_content and links via url.
+Supports notification lifecycle management with status (pending, sent, failed, etc.).
+Categorized by platform (e.g., admin, driver app, client app, etc.).
+Default ordering is by creation date.
+
+3. AdminNotification, DriverNotification, ConciergeNotification
+Role-specific notifications that extend the core model.
+Examples:
+AdminNotification: For admin-specific tasks like document approvals.
+DriverNotification: Stores trip-related details for drivers.
+ConciergeNotification: Tracks trip/payment details for the concierge team.
+
+4. NotificationTrigger
+Configurable triggers for notifications based on system events (e.g., driver registration, trip updates, etc.).
+Allows toggling of trigger-based notifications (is_enabled).
+
+5. NotificationPreference
+User-specific preferences for managing notification channels (push, email, SMS, in-app).
+Supports multilingual notifications with a language field.

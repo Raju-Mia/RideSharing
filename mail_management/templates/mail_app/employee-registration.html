@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification Page</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #F5F5F5;
+        }
+
+        .step-container {
+            display: flex;
+            flex-direction: column;
+            max-width: 645px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 20px;
+        }
+
+        .card {
+            border: 1px solid rgba(42, 75, 125, 0.24);
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            color: #5C5C5C;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .logo {
+            width: 97px;
+            height: 32px;
+        }
+
+        .divider {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-top: 1px solid #034F75;
+        }
+
+        .text {
+            font-size: 24px;
+            color: #034F75;
+            margin-top: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .btn {
+            height: 45px;
+            width: 120px;
+            border: #034F75;
+            border-radius: 121px;
+            background: var(--tyt, linear-gradient(272deg, #044A6F 0.44%, #042B51 85.41%));
+            box-shadow: 0px 4px 8.4px 0px rgba(6, 182, 212, 0.35);
+            color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+            /* Remove the underline from the button */
+        }
+
+        .p {
+            padding: 20px;
+        }
+
+        .address {
+            font-size: 12px;
+            color: #5C5C5C;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #8F8F8F;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .social-icons {
+            display: flex;
+            background-color: #034F75;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-logo {
+            width: 12px;
+            height: 12px;
+        }
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .text {
+                font-size: 20px;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .text {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="step-container">
+        <div class="card">
+            <div class="p">
+                <img src="https://drive.google.com/uc?export=view&id=1k76cLcoHUFTtWr-GZDeB7zVmeysBU4hM" alt="Logo"
+                    class="logo">
+                <hr class="divider">
+                {% comment %} <h1>{{username}}</h1> {% endcomment %}
+                <p>Your participation is greatly appreciated, and we're excited to have you join us.</p>
+                <p>To complete your registration, please click the button below:</P>
+                <a href="{{ url }}">
+                    <button class="btn">
+                        Register Now
+                    </button>
+                </a>
+
+                {% comment %} <p>Email: {{ recipient_list.0 }}</p>
+                <p>Mail Type: {{ mail_type }}</p> {% endcomment %}
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

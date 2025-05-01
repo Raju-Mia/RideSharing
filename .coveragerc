@@ -1,0 +1,9 @@
+[run]
+source=accounts/, uc_back/,
+omit=
+    env
+    */migrations/*
+    */tests/*
+    */__init__.py
+    uc_back/wsgi.py 
+    uc_back/asgi.py 

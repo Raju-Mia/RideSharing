@@ -1,0 +1,31 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'accounts/style.css' %}">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form class="form_container" action="" method="post">
+      {% csrf_token %}
+      <h3>Django Admin Login</h3>
+      <div class="form_input_box">
+        <input type="email" name="username" id="username" placeholder="Email" />
+      </div>
+      <div class="form_input_box">
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+        />
+      </div>
+      <button type="submit">Login</button>
+    </form>
+  </body>
+</html>
